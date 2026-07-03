@@ -1,0 +1,23 @@
+:root{
+
+    /* Colores */
+
+    --gold:#D8B15D;
+    --gold-light:#F6E7A5;
+
+    --purple:#5A2678;
+    --purple-dark:#2E0F47;
+
+    --white:#FFFFFF;
+
+    /* Tipografías */
+
+    --title-font:'Great Vibes', cursive;
+    --body-font:'Cormorant Garamond', serif;
+
+    /* Duraciones */
+
+    --transition:.45s;
+    --transitionSlow:1s;
+
+}

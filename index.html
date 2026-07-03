@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Ashly</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- SOBRE INICIAL -->
+<section class="envelope-screen" id="envelopeScreen">
+  <div class="magic-flash" id="magicFlash"></div>
+
+  <div class="seal-container">
+  <button class="seal-button" id="sealButton">
+    <span class="seal-glow"></span>
+    <span class="shine"></span>
+    <img src="images/SELLOMARIPOSA.png" alt="Abrir invitación">
+  </button>
+</div>
+
+  <p class="open-text">✨ Toca el sello y deja que la magia comience...</p>
+</section>
+<!-- PORTADA PRINCIPAL -->
+<main class="main-page" id="mainPage">
+
+  <!-- PORTADA EN VIDEO -->
+  <section class="video-hero">
+    <video class="hero-video" id="heroVideo" loop playsinline controls>
+  <source src="images/CUMPLEAÑOSNAHARAZOE.mp4" type="video/mp4">
+    </video>
+
+    <div class="scroll-indicator">
+      <span>Desliza para ver la invitación</span>
+      <div class="arrow-down">⌄</div>
+    </div>
+  </section>
+
+  <!-- HOJA / LIBRO -->
+  <section class="story-book">
+
+    <!-- MÚSICA -->
+    <div class="chapter music-chapter">
+      <audio id="bgMusic" loop>
+        <source src="images/CANCIONDEMICKEY.mp3" type="audio/mpeg">
+      </audio>
+
+      <button class="music-button" id="musicButton">
+        <span class="music-icon">▶</span>
+        <span class="music-text">PLAY</span>
+      </button>
+    </div>
+
+    <!-- FECHA -->
+    <div class="chapter date-chapter">
+      <img class="date-decoration" src="images/MARIPOSAS.png" alt="Decoración">
+
+      <div class="date-box">
+        <h3>Viernes</h3>
+        <div class="date-line"></div>
+        <h2>18</h2>
+        <div class="date-line"></div>
+        <h3>Diciembre</h3>
+      </div>
+
+      <div class="story-text">
+        <p>Dicen que la vida está hecha de capítulos, y este es uno de los más importantes: Mis XV.</p>
+        <p>Quiero que seas parte de estas páginas que nunca olvidaré.</p>
+      </div>
+    </div>
+
+    <!-- PRINCESA -->
+    <div class="chapter princess-chapter">
+      <img class="princess-img" src="images/MARIPOSAS.png" alt="Princesa">
+
+      <p class="special-phrase">
+        Tu presencia hará de este día un<br>
+        recuerdo inolvidable.
+      </p>
+    </div>
+
+    <!-- PADRES Y PADRINOS -->
+    <div class="chapter family-chapter">
+      <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+      <h2>Mis padres</h2>
+      <p>Luz María Ramírez Dirzo</p>
+      <span>y</span>
+      <p>Israel Aguilar Álvarez</p>
+
+      <h2>Mis padrinos</h2>
+      <p>Karla Veronica Aguilar Álvarez</p>
+      <span>y</span>
+      <p>Marco Antonio Rodríguez  González</p>
+
+      <img class="gold-ornament bottom" src="images/SEPARACION.png" alt="Adorno">
+    </div>
+   <!-- CONTADOR -->
+<div class="chapter countdown-chapter">
+
+  <div class="countdown-background">
+    <img src="images/FONDOCONTADOR.png" alt="Fondo contador">
+
+    <div class="countdown-content">
+
+      <p class="countdown-title">FALTAN</p>
+
+      <div class="countdown-box">
+        <div class="count-item">
+          <span id="days">00</span>
+          <small>DÍAS</small>
+        </div>
+
+        <span class="count-separator">:</span>
+
+        <div class="count-item">
+          <span id="hours">00</span>
+          <small>HORAS</small>
+        </div>
+
+        <span class="count-separator">:</span>
+
+        <div class="count-item">
+          <span id="minutes">00</span>
+          <small>MIN</small>
+        </div>
+
+        <span class="count-separator">:</span>
+
+        <div class="count-item">
+          <span id="seconds">00</span>
+          <small>SEG</small>
+        </div>
+      </div>
+
+      <p class="countdown-phrase">¡Te espero con mucha ilusión!</p>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- CUÁNDO Y DÓNDE -->
+<div class="chapter places-chapter">
+
+  <h2 class="gold-script-title">¿Cuándo y dónde?</h2>
+
+  <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+  <!-- CEREMONIA -->
+  <div class="place-card">
+    <img src="images/UBICACION.png" alt="Ceremonia Religiosa">
+
+    <div class="place-info">
+      <p class="place-kicker">INICIAMOS CON LA</p>
+      <h3>Ceremonia Religiosa</h3>
+      <h4>Parroquia de San Felipe Neri y Nuestra Señora del Refugio</h4>
+      
+      <p>Av Hacienda de Narvarte 79, Prados del Rosario, Azcapotzalco c.p. 02410</p>
+      <strong>03:00 P.M. HRS</strong>
+
+      <a href="https://maps.app.goo.gl/nAnW11qBu7BoUAFR8?g_st=iw" target="_blank" class="location-btn">VER UBICACIÓN</a>
+    </div>
+  </div>
+
+  
+    <div class="place-card">
+        <img src="images/recepcion.jpg" alt="Recepción">
+
+        <div class="place-info">
+        <p class="place-kicker">LUGAR DEL EVENTO</p>
+        <h3>Salón</h3>
+        <h4>El águila 
+Sindicato nacional de trabajadores petróleos sección 34 </h4>
+        <p>Calle Priv. Víctor Hernández Covarrubias 25, San Juan Tlihuaca, Azcapotzalco c.p. 02400</p>
+        <strong>20:20 HRS</strong>
+
+        <a href="Priv. Víctor Hernández Covarrubias 25, San Juan Tlihuaca, Azcapotzalco, 02400 Ciudad de México, CDMX" target="_blank" class="location-btn">VER UBICACIÓN</a>
+        </div>
+    </div>
+
+</div>
+<!-- ITINERARIO -->
+  <!--  <div class="chapter itinerary-chapter">
+
+      <img class="seal-flower-img" src="images/sello-flores.png" alt="Sello decorativo">
+
+      <img class="gold-ornament" src="images/adorno-dorado.png" alt="Adorno">
+
+      <h2 class="purple-script-title">Itinerario</h2>
+
+      <p class="itinerary-date">14 DE FEBRERO DE 2026</p>
+
+      <div class="itinerary-item">
+        <img src="images/icono-iglesia.png" alt="Ceremonia">
+        <div class="itinerary-line"></div>
+        <div>
+          <strong>17:17 HRS</strong>
+          <p>CEREMONIA<br>RELIGIOSA</p>
+        </div>
+      </div>
+
+      <div class="itinerary-item">
+        <img src="images/icono-copa.png" alt="Recepción">
+        <div class="itinerary-line"></div>
+        <div>
+          <strong>20:20 HRS</strong>
+          <p>RECEPCIÓN<br>DEL EVENTO</p>
+        </div>
+      </div>
+
+    </div>-->
+
+<!-- CÓDIGO DE VESTIMENTA -->
+   <div class="chapter dresscode-chapter">
+
+      <img class="date-decoration" src="images/SEPARACION.png" alt="Decoración">
+
+      <h2 class="gold-script-title">Código de Vestimenta</h2>
+
+      <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+      <img class="dresscode-img" src="images/CODIGOVES.png" alt="Código de vestimenta">
+
+      <h3>FORMAL</h3>
+
+      <p>
+        Gracias por acompañarnos siguiendo el código de vestimenta.
+        Les pedimos de favor que el color azul quede reservado para nuestra quinceañera.
+      </p>
+
+    </div>
+<!-- MESA DE REGALOS -->
+  <!--  <div class="chapter gifts-chapter">
+      <img class="gift-image" src="images/sobre-regalo.png" alt="Sobre regalo">
+
+      <h2 class="gold-script-title">Lluvia de Sobres y Mesa de Regalos</h2>
+
+      <img class="gold-ornament" src="images/adorno-dorado.png" alt="Adorno">
+
+      <p class="gift-text">
+        Tu presencia es el regalo más bonito, pero si deseas obsequiarme algo,
+        puede ser en efectivo en la lluvia de sobres que tengo preparada para el día del evento.
+      </p>
+
+      <div class="gift-card">
+        <img src="images/icono-regalo.png" alt="Regalo">
+        <span>No. de Evento : 5555 55 5555</span>
+      </div>
+
+      <a href="#" class="outline-button">IR A MESA DE REGALOS</a>
+
+      <h3 class="thanks-title">¡Gracias!</h3>
+
+      <img class="princess-small" src="images/princesa2.png" alt="Princesa">
+    </div>-->
+
+
+<!-- INSTAGRAM -->
+  <!--  <div class="chapter social-chapter">
+      <img class="camera-image" src="images/CAMARA.png" alt="Cámara">
+
+      <h2 class="gold-script-title">Captura cada Instante</h2>
+
+      <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+      <p class="gift-text">
+        También puedes etiquetar a nuestra quinceañera en Instagram con su username
+      </p>
+
+      <h4>@anasof1</h4>
+
+      <a href="#" class="outline-button">ABRIR INSTAGRAM</a>
+    </div>-->
+
+
+    <!-- FOTO PARA REDES -->
+    <!--<div class="chapter share-chapter">
+      <img class="share-photo" src="images/post-redes.jpg" alt="Comparte en redes">
+    </div>-->
+
+
+<!-- GALERÍA -->
+<div class="chapter gallery-chapter">
+  <h2 class="gallery-title">Galería de Fotos</h2>
+
+  <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+  <p class="gift-text">
+    Cada fotografía guarda un recuerdo, cada recuerdo cuenta una historia.
+    Y esta historia es la de primer año.
+  </p>
+
+  <div class="gallery-slider">
+    <button class="gallery-btn prev" id="prevPhoto">‹</button>
+
+    <img id="galleryImage" src="images/GALERIA1.png" alt="Foto galería">
+
+    <button class="gallery-btn next" id="nextPhoto">›</button>
+  </div>
+
+  <div class="gallery-dots" id="galleryDots"></div>
+</div>
+
+<!-- ÁLBUM COMPARTIDO -->
+<div class="chapter album-chapter">
+  <img class="qr-image" src="images/qr-album.png" alt="QR álbum">
+
+  <h2 class="gallery-title">Álbum Compartido</h2>
+
+  <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+  <p class="gift-text">
+    Da click aquí para subir las fotos que tomes durante la fiesta
+    y formar parte de mis recuerdos más especiales.
+  </p>
+
+  <a href="#" class="outline-button">ABRIR ÁLBUM</a>
+
+  <img class="final-decoration" src="images/MARIPOSAS.png" alt="Decoración final">
+</div>
+
+<!-- CONFIRMACIÓN -->
+<div class="chapter rsvp-chapter">
+  <h2 class="gold-script-title">¿Asistirás?</h2>
+
+  <img class="gold-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+  <p class="gift-text">
+    ¡Será increíble contar con tu presencia!<br>
+    Por favor, confirma tu asistencia a este día tan especial para mí.
+  </p>
+
+  <p class="gift-text">
+    Tu respuesta es muy importante.<br>
+    Envía un mensaje con tu nombre completo en mi panel digital y descarga tu QR.
+  </p>
+
+  <button class="confirm-button" id="openRsvpModal" type="button">
+  CONFIRMAR ASISTENCIA
+  </button>
+
+  <img class="gold-ornament rsvp-ornament" src="images/SEPARACION.png" alt="Adorno">
+
+  <p class="gift-text">
+    ¡Agradezco de corazón que celebres con nosotros!<br><br>
+    ¡Nos vemos pronto!
+  </p>
+
+  <h3 class="farewell-title">
+    ¡CON CARIÑO<br>
+    ASHLY!
+  </h3>
+</div>
+
+
+
+  </section>
+
+</main>
+
+ <div class="rsvp-modal" id="rsvpModal">
+  <div class="rsvp-modal-content">
+
+    <button class="rsvp-close" id="closeRsvpModal" type="button">×</button>
+
+    <h2>Confirmar asistencia</h2>
+    <p>Por favor completa los datos para confirmar tu asistencia.</p>
+
+    <form id="rsvpForm">
+
+      <label>¿Vas a asistir?</label>
+      <select id="attendance" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Sí asistiré">Sí asistiré</option>
+        <option value="No podré asistir">No podré asistir</option>
+      </select>
+
+      <label>Cantidad de personas</label>
+      <input 
+        type="number" 
+        id="guestCount" 
+        min="1" 
+        placeholder="Ej. 2" 
+        required
+      >
+
+      <button type="submit" class="modal-send-btn">
+        ENVIAR POR WHATSAPP
+      </button>
+
+    </form>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
