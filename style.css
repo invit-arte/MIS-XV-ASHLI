@@ -20,7 +20,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: url("images/FONDOPORTADA.png") center/cover no-repeat;
+  background: url("images/PORTADAASHLI2.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,20 +144,23 @@ body {
   position: absolute;
   left: 50%;
   top: 58%;
-  width: 26px;
-  height: 20px;
+  width: 24px;
+height: 20px;
   pointer-events: none;
-  z-index: 99999;
+  z-index: 10001;
   animation: butterflyFly 1.9s ease-out forwards;
 }
 
 .wing {
   position: absolute;
   top: 2px;
-  width: 13px;
-  height: 17px;
-  background: radial-gradient(circle at 40% 35%, #ffffff, #d8d8d8 45%, #9fa8b3 100%);
-  box-shadow: 0 0 10px rgba(255,255,255,.75);
+  width: 12px;
+height: 16px;
+  background: radial-gradient(circle at 35% 30%, #ffffff, #e9edf2 45%, #b7c0cc 100%);
+  box-shadow:
+    0 0 8px rgba(255,255,255,.95),
+    0 0 18px rgba(255,255,255,.75),
+    inset 0 0 6px rgba(255,255,255,.8);
 }
 
 .left-wing {
@@ -177,12 +180,12 @@ body {
 .butterfly-body {
   position: absolute;
   left: 50%;
-  top: 4px;
-  width: 3px;
-  height: 15px;
+  top: 7px;
+  width: 2px;
+  height: 12px;
   border-radius: 20px;
-  background: #f7f7f7;
-  box-shadow: 0 0 8px rgba(255,255,255,.9);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255,255,255,1);
   transform: translateX(-50%);
 }
 
@@ -431,7 +434,7 @@ body {
 .family-chapter h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 38px;
-  color: #798ea9;
+  color: #24344d; /*MIS PADRES Y PADRINOS*/
   font-weight: 400;
   margin: 18px 0 16px;
 }
@@ -439,7 +442,7 @@ body {
 .family-chapter p,
 .family-chapter span {
   font-size: 18px;
-  color: #101b35;
+  color: #596a80;
   margin-bottom: 14px;
   display: block;
 }
@@ -744,7 +747,7 @@ body {
 
 .gold-script-title {
   font-family: 'Great Vibes', cursive;
-  color: #798ea9;
+  color: #24344d; /*cuando y donde*/
   font-size: 45px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -752,7 +755,7 @@ body {
 
 .place-card {
   background: #fff;
-  border: 1px solid #f0d6c8;
+  border: 1px solid #24344d;
   border-radius: 17px;
   overflow: hidden;
   margin: 35px auto;
@@ -787,14 +790,14 @@ body {
 
 .place-info h4 {
   font-size: 20px;
-  color: #101b35;
+  color: #24344d; /* nombre de la iglesia*/
   font-weight: 700;
   margin-bottom: 16px;
 }
 
 .place-info p {
   font-size: 16px;
-  color: #21304c;
+  color: #24344d;
   line-height: 1.35;
 }
 
@@ -808,8 +811,8 @@ body {
 
 .location-btn {
   display: inline-block;
-  background: #596a80; /* boton de ubicacion*/
-  color: white; 
+  background: #6c94a0; /* boton de ubicacion*/
+  color: #ffffff; 
   text-decoration: none;
   padding: 10px 28px;
   border-radius: 50px;
@@ -823,28 +826,28 @@ body {
 
 .itinerary-chapter {
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
 }
 
 .seal-flower-img {
   width: 82%;
   max-width: 290px;
   display: block;
-  margin: 0 auto 35px;
+  margin: 0 auto 20px;
 }
 
 .purple-script-title {
   font-family: 'Great Vibes', cursive;
   font-size: 48px;
-  color: #b86abe;
+  color: #24344d; /*titulo itinerario*/
   font-weight: 400;
   margin: 10px 0 12px;
 }
 
 .itinerary-date {
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 7px;
-  color: #d09a36;
+  color: #798ea9;
   margin-bottom: 38px;
 }
 
@@ -858,19 +861,19 @@ body {
 }
 
 .itinerary-item img {
-  width: 42px;
+  width: 80px;
   display: block;
   margin: 0 auto;
 }
 
 .itinerary-line {
-  width: 58px;
+  width: 50px;
   height: 1px;
-  background: #d09a36;
+  background: #798ea9;
 }
 
 .itinerary-item strong {
-  color: #d09a36;
+  color: #798ea9;
   font-size: 15px;
   letter-spacing: 1px;
 }
@@ -983,13 +986,69 @@ body {
   font-size: 16px;
   margin: 12px 0 18px;
 }
+/* SECCION FOTO INSTAGRAM */
+.share-chapter {
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+
+.share-photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
 .share-photo {
   width: 100%;
-  max-width: 390px;
   display: block;
-  margin: 0 auto;
 }
+
+.share-photo-text {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.65),
+    0 0 12px rgba(255,255,255,.35);
+}
+
+.share-photo-text p {
+  margin: 0 0 14px;
+  font-size: 11px;
+  line-height: 1.9;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.share-photo-text span {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.share-photo-text strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ffffff; /* Azul plumbago */
+
+  text-shadow:
+      0 0 2px rgba(255,255,255,.95),
+      0 0 8px rgba(255,255,255,.75),
+      0 2px 4px rgba(0,0,0,.35);
+}
+/*SECCION DONDE TERMINA INSTAGRAM*/
 
 .gallery-title {
   font-family: 'Cormorant Garamond', serif;
@@ -1094,7 +1153,7 @@ body {
 
 .confirm-button {
   display: inline-block;
-  background: #596a80;
+  background: #6c94a0;
   color: white;
   text-decoration: none;
   padding: 12px 34px;
