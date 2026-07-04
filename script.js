@@ -49,12 +49,12 @@ function createButterflies() {
     `;
 
     const angle = Math.random() * Math.PI * 2;
-    const distance = Math.random() * 170 + 80;
+    const distance = Math.random() * 180 + 90;
 
     const x = Math.cos(angle) * distance;
     const y = Math.sin(angle) * distance - 40;
 
-    const size = Math.random() * 0.45 + 0.55;
+    const size = Math.random() * 0.55 + 0.85;
     const endSize = size * 1.35;
     const rotate = Math.random() * 360;
 
@@ -142,9 +142,7 @@ setInterval(updateCountdown, 1000);
 const galleryPhotos = [
   "images/GALERIA1.png",
   "images/GALERIA2.png",
-  "images/GALERIA3.png",
-  "images/GALERIA4.png",
-  "images/GALERIA5.png"
+  "images/GALERIA3.png"
 ];
 
 const galleryImage = document.getElementById("galleryImage");
