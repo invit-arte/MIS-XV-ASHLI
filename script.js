@@ -1,3 +1,5 @@
+import { buscarTelefono } from "./firebase.js";
+
 const sealButton = document.getElementById("sealButton");
 const envelopeScreen = document.getElementById("envelopeScreen");
 const mainPage = document.getElementById("mainPage");
@@ -5,6 +7,7 @@ const magicFlash = document.getElementById("magicFlash");
 const heroVideo = document.getElementById("heroVideo");
 
 let opened = false;
+let invitadoActual = null;
 
 sealButton.addEventListener("click", () => {
   if (opened) return;
@@ -200,28 +203,126 @@ const rsvpForm = document.getElementById("rsvpForm");
 const whatsappNumber = "5215541916126"; // cambia este número
 
 openRsvpModal.addEventListener("click", () => {
-  rsvpModal.classList.add("active");
+
+    // Reiniciar modal
+    document.getElementById("buscarInvitado").style.display = "block";
+    document.getElementById("datosInvitado").style.display = "none";
+
+    document.getElementById("telefonoBusqueda").value = "";
+    document.getElementById("attendance").value = "";
+
+    mensajeBusqueda.textContent = "";
+
+    document.getElementById("nombreFamilia").textContent = "";
+    document.getElementById("cantidadPases").textContent = "";
+
+    invitadoActual = null;
+
+    rsvpModal.classList.add("active");
+
 });
 
-closeRsvpModal.addEventListener("click", () => {
-  rsvpModal.classList.remove("active");
-});
+function cerrarModal() {
+
+    rsvpModal.classList.remove("active");
+
+}
+
+closeRsvpModal.addEventListener("click", cerrarModal);
 
 rsvpModal.addEventListener("click", (e) => {
-  if (e.target === rsvpModal) {
-    rsvpModal.classList.remove("active");
-  }
+
+    if (e.target === rsvpModal) {
+
+        cerrarModal();
+
+    }
+
 });
 
 rsvpForm.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  const attendance = document.getElementById("attendance").value;
-  const guestCount = document.getElementById("guestCount").value;
+    e.preventDefault();
 
-  const message = `Hola, quiero confirmar mi asistencia al cumple de Nahara Zoé.%0A%0AAsistencia: ${attendance}%0ACantidad de personas: ${guestCount}`;
+    const attendance = document.getElementById("attendance").value;
+      if(attendance === ""){
 
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+    mensajeAsistencia.textContent =
+    "Selecciona una opción para continuar.";
 
-  window.open(whatsappURL, "_blank");
+    return;
+
+}
+mensajeAsistencia.textContent = "";
+
+    const message = `✨ NUEVA CONFIRMACIÓN DE ASISTENCIA
+
+👨‍👩‍👧 Invitado:
+${invitadoActual.nombre}
+
+🎟️ Pases asignados:
+${invitadoActual.pases}
+
+✅ Respuesta:
+${attendance}`;
+
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    cerrarModal();
+    window.open(whatsappURL, "_blank");
+
+});
+
+const mensajeBusqueda =
+document.getElementById("mensajeBusqueda");
+
+const mensajeAsistencia =
+document.getElementById("mensajeAsistencia");
+
+const btnBuscarInvitado = document.getElementById("btnBuscarInvitado");
+
+btnBuscarInvitado.addEventListener("click", async () => {
+
+    const telefono = document
+        .getElementById("telefonoBusqueda")
+        .value
+        .trim();
+
+    if (telefono === "") {
+
+    mensajeBusqueda.textContent =
+    "Ingresa tu número de teléfono.";
+
+    return;
+
+}
+
+    const invitado = await buscarTelefono(telefono);
+
+    if (!invitado) {
+
+    mensajeBusqueda.textContent =
+    "No encontramos ese número. Verifica que sea el teléfono con el que recibiste la invitación.";
+
+    return;
+
+}
+    mensajeBusqueda.textContent = "";
+    invitadoActual = invitado;
+    // Ocultar búsqueda
+    document.getElementById("buscarInvitado").style.display = "none";
+
+    // Mostrar datos
+    document.getElementById("datosInvitado").style.display = "block";
+
+    // Nombre
+    document.getElementById("nombreFamilia").textContent =
+        invitado.nombre;
+
+    // Pases
+    document.getElementById("cantidadPases").textContent =
+        invitado.pases + " pases";
+
+
 });
