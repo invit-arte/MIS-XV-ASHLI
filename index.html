@@ -30,7 +30,7 @@
   <!-- PORTADA EN VIDEO -->
   <section class="video-hero">
     <video class="hero-video" id="heroVideo" loop playsinline controls>
-  <source src="images/CUMPLEAÑOSNAHARAZOE.mp4" type="video/mp4">
+  <source src="images/VIDEOINICIO.mp4" type="video/mp4">
     </video>
 
     <div class="scroll-indicator">
@@ -42,10 +42,11 @@
   <!-- HOJA / LIBRO -->
   <section class="story-book">
 
+</div>
     <!-- MÚSICA -->
     <div class="chapter music-chapter">
       <audio id="bgMusic" loop>
-        <source src="images/CANCIONDEMICKEY.mp3" type="audio/mpeg">
+        <source src="images/cancion.mp3" type="audio/mpeg">
       </audio>
 
       <button class="music-button" id="musicButton">
@@ -246,11 +247,11 @@ Sindicato nacional de trabajadores petróleos sección 34 </h4>
       </p>
 
       <div class="gift-card">
-        <img src="images/icono-regalo.png" alt="Regalo">
-        <span>No. de Evento : 5555 55 5555</span>
+        <!--<img src="images/icono-regalo.png" alt="Regalo">-->
+        <!--<span>No. de Evento : 5555 55 5555</span>-->
       </div>
 
-      <a href="#" class="outline-button">IR A MESA DE REGALOS</a>
+      <a href="https://www.amazon.com.mx/registries/gl/guest-view/1SOHECDC1AGDB?ref_=cm_sw_r_apann_ggr-subnav-share_T2PZNE8V7EKTQXXDRTM0&language=en-US" class="outline-button">IR A MESA DE REGALOS</a>
 
       <h3 class="thanks-title">¡Gracias!</h3>
 
@@ -315,7 +316,7 @@ Sindicato nacional de trabajadores petróleos sección 34 </h4>
 
 <!-- ÁLBUM COMPARTIDO -->
 <div class="chapter album-chapter">
-  <img class="qr-image" src="images/qr-album.png" alt="QR álbum">
+  <img class="qr-image" src="images/QRASHLI.png" alt="QR álbum">
 
   <h2 class="gallery-title">Álbum Compartido</h2>
 
@@ -326,7 +327,7 @@ Sindicato nacional de trabajadores petróleos sección 34 </h4>
     y formar parte de mis recuerdos más especiales.
   </p>
 
-  <a href="#" class="outline-button">ABRIR ÁLBUM</a>
+  <a href="https://drive.google.com/drive/folders/1i0q44ibv8mcE-S0BGAIOIZ6taaRH7eHx" class="outline-button">ABRIR ÁLBUM</a>
 
   <img class="final-decoration" src="images/MARIPOSAS.png" alt="Decoración final">
 </div>
@@ -367,44 +368,99 @@ Sindicato nacional de trabajadores petróleos sección 34 </h4>
 
 
   </section>
+    
+  
 
 </main>
 
 <div class="rsvp-modal" id="rsvpModal">
-  <div class="rsvp-modal-content">
+    <div class="rsvp-modal-content">
 
-    <button class="rsvp-close" id="closeRsvpModal" type="button">×</button>
+        <button class="rsvp-close" id="closeRsvpModal" type="button">×</button>
 
-    <h2>Confirmar asistencia</h2>
-    <p>Por favor completa los datos para confirmar tu asistencia.</p>
+        <!-- ===================== -->
+        <!-- PANTALLA BUSCAR -->
+        <!-- ===================== -->
 
-    <form id="rsvpForm">
+        <div id="buscarInvitado">
 
-      <label>¿Vas a asistir?</label>
-      <select id="attendance" required>
-        <option value="">Selecciona una opción</option>
-        <option value="Sí asistiré">Sí asistiré</option>
-        <option value="No podré asistir">No podré asistir</option>
-      </select>
+            <h2>Confirmar asistencia</h2>
 
-      <label>Cantidad de personas</label>
-      <input 
-        type="number" 
-        id="guestCount" 
-        min="1" 
-        placeholder="Ej. 2" 
-        required
-      >
+            <p>
+                Ingresa el número de teléfono con el que recibiste esta invitación.
+            </p>
 
-      <button type="submit" class="modal-send-btn">
-        ENVIAR POR WHATSAPP
-      </button>
+            <input
+                type="tel"
+                id="telefonoBusqueda"
+                placeholder="Ej. 4771234567">
 
-    </form>
-  </div>
+            <button
+                id="btnBuscarInvitado"
+                class="modal-send-btn"
+                type="button">
+
+                BUSCAR
+
+            </button>
+            <p id="mensajeBusqueda" class="mensaje-busqueda"></p>
+
+        </div>
+
+
+        <!-- ===================== -->
+        <!-- PANTALLA BIENVENIDA -->
+        <!-- ===================== -->
+
+        <div id="datosInvitado" style="display:none;">
+
+            <h2>✨ ¡Bienvenidos!</h2>
+
+            <h3 id="nombreFamilia"></h3>
+
+            <p>
+                Nos alegra mucho contar con su presencia.
+            </p>
+
+            <h4>🎟️ Esta invitación incluye</h4>
+
+            <h1 id="cantidadPases"></h1>
+
+            <form id="rsvpForm">
+
+                <label>¿Asistirán?</label>
+
+                <select id="attendance" required>
+
+                <option value="">Selecciona una opción</option>
+
+                <option value="Sí asistiré">
+                    Sí asistiré
+                </option>
+
+                <option value="No podré asistir">
+                    No podré asistir
+                </option>
+
+            </select>
+
+            <p id="mensajeAsistencia" class="mensaje-busqueda"></p>
+
+                <button
+                    type="submit"
+                    class="modal-send-btn">
+
+                    CONFIRMAR ASISTENCIA
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
 </div>
 
-    <script src="script.js"></script>
-
+    <script type="module" src="script.js"></script>
 </body>
 </html>
