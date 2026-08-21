@@ -1000,6 +1000,38 @@ height: 16px;
   font-weight: 600;
 }
 
+/* =========================
+   BOTONES MESA DE REGALOS
+   ========================= */
+
+.gift-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 330px;
+  margin: 18px auto 0;
+}
+
+.gift-button {
+  width: 100%;
+  max-width: 285px;
+  text-align: center;
+  padding: 9px 18px;
+  line-height: 1.25;
+  white-space: normal;
+  box-sizing: border-box;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.gift-button:hover {
+  background: rgba(89, 106, 128, .10);
+  color: #24344d;
+  transform: translateY(-1px);
+}
+
+
 .thanks-title {
   font-family: 'Great Vibes', cursive;
   font-size: 42px;
